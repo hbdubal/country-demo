@@ -1,0 +1,46 @@
+{
+  "country": [
+    {
+      "country": "India",
+      "id": 1
+    },
+    {
+      "country": "Uk",
+      "id": 2
+    }
+  ],
+  "state": [
+    {
+      "state": "Gujrat",
+      "countryId": 1,
+      "id": 1
+    },
+    {
+      "state": "Aasam",
+      "countryId": 2,
+      "id": 2
+    },
+    {
+      "state": "Manchester",
+      "countryId": 3,
+      "id": 3
+    }
+  ],
+  "cities": [
+    {
+      "cityName": "Valsad",
+      "stateId": 1,
+      "id": 1
+    },
+    {
+      "cityName": "Bilimora",
+      "stateId": 2,
+      "id": 2
+    },
+    {
+      "cityName": "Guwahati",
+      "stateId": 3,
+      "id": 3
+    }
+  ]
+}

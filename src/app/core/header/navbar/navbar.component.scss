@@ -1,0 +1,13 @@
+nav {
+    .navbar-nav {
+        margin: 0 auto;
+        .nav-link {
+            margin: 10px 25px;
+            color: #fff;
+
+            &:hover {
+                color: yellow;
+            }
+        }
+    }
+}

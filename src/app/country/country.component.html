@@ -1,0 +1,65 @@
+<section class="register-form mt-3">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="card border p-4">
+                    <div class="card-header">
+                        <h3 class="mb-2 text-center text-info">Register</h3>
+                    </div>
+                    <div class="card-body">
+                        <form [formGroup]="countryForm">
+                            <div class="form-group mb-3">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <label for="country">Country:</label>
+                                        <select formControlName="country" class="form-control" change)="changeCountry($event.target.value)">
+                                            <option>Select country</option>
+                                            <option *ngFor="let country of countries">{{country.shortName}}</option>
+                                        </select>
+                                        <div
+                                            *ngIf="countryForm.get('country')?.invalid && (issubmitted || countryForm.get('country')?.touched || countryForm.get('country')?.dirty)">
+                                            <span class="text-danger"
+                                                *ngIf="countryForm.get('country')?.errors?.['required']">Please
+                                                Enter valid Country*</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label for="state">State:</label>
+                                        <select formControlName="state" class="form-control">
+                                            <option>Select State</option>
+                                            <!-- <option *ngFor="let state of states">{{state.state_name}}</option> -->
+                                        </select>
+                                        <div
+                                            *ngIf="countryForm.get('state')?.invalid && (issubmitted || countryForm.get('state')?.touched || countryForm.get('state')?.dirty)">
+                                            <span class="text-danger"
+                                                *ngIf="countryForm.get('state')?.errors?.['required']">Please
+                                                Enter valid State*</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label for="city">City:</label>
+                                        <select formControlName="city" class="form-control">
+                                            <option>Select City</option>
+                                            <!-- <option *ngFor="let user of userdata">
+                                                {{user}}
+                                            </option> -->
+                                        </select>
+                                        <div
+                                            *ngIf="countryForm.get('city')?.invalid && (issubmitted || countryForm.get('city')?.touched || countryForm.get('city')?.dirty)">
+                                            <span class="text-danger"
+                                                *ngIf="countryForm.get('city')?.errors?.['required']">Please
+                                                Enter valid City*</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reg_btn">
+                                <button type="submit" class="btn btn-primary">Register</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
